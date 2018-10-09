@@ -600,10 +600,11 @@ def problem1c(strings):
     for k in range(len(strings)):
         if is_prime(len(strings[k])) == True:
             number = number + 1
-            if is_prime(number) == True:
-                return True
-    else:
-        return False
+        return number
+        if is_prime(number) == True:
+            return True
+        else:
+            return False
 
 def run_test_problem1d():
     """ Tests the   problem1d   function. """
@@ -786,13 +787,14 @@ def problem1d(strings):
       :rtype: str | -1
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
     for k in range(len(strings)):
         if is_prime(len(strings[k])) == True:
             return strings[k]
+    return -1
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.
